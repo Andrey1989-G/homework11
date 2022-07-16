@@ -5,7 +5,7 @@
     <title>Найдено кандидатов</title>
 </head>
 <body>
-<h1>Найдено кандидатов хрен знает сколько</h2>
+<h1>Найдено кандидатов {{count_candid}}</h2>
 
 {% for candidate in candidates %}
 <p><a href="/candidate/{{candidate.pk}}">{{candidate.name}}</a></p>

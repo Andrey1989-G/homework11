@@ -26,13 +26,17 @@ if __name__ == '__main__':
     @app.route('/search/<name>/')
     def search_by_name(name):
         candidates = get_by_name(name)
-        return render_template('search.html', candidates=candidates)
+        count_candid = len(candidates)
+        return render_template('search.html', candidates=candidates,
+                               count_candid=count_candid)
 
 
     @app.route('/skill/<skill>/')
     def search_by_skill(skill):
         candidates = get_by_skill(skill)
-        return render_template('skill.html', candidates=candidates)
+        count_candid = len(candidates)
+        return render_template('skill.html', candidates=candidates,
+                               count_candid=count_candid)
 
 
     app.run(debug=True)
